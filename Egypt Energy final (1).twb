@@ -1,0 +1,3133 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20261.26.0410.0924                               -->
+<workbook original-version='18.1' source-build='2026.1.1 (20261.26.0410.0924)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <_.fcp.CustomThemes.true...CustomThemes />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.CustomThemes.true...style-theme name='custom' value='Egypt_Energy_theme2' />
+  <datasources>
+    <datasource caption='Egypt_Energy_Project' inline='true' name='federated.1o1oipp091upgn1frytnx1lacpyo' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Egypt_Energy_Project' name='excel-direct.0a15p311jk68fz17ol2wd05uhnsw'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/USER/AppData/Local/Packages/5319275A.WhatsAppDesktop_cv1g1gvanyjgm/LocalState/sessions/E27780653E0ACF027DCCCE763C444165E8FA39DE/transfers/2026-29/Egypt_Energy_Project.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='excel-direct.0a15p311jk68fz17ol2wd05uhnsw' name='Annual_Panel_16countries' table='[Annual_Panel_16countries$]' type='table'>
+            <columns gridOrigin='A1:Z385:no:A1:Z385:0' header='yes' outcome='6'>
+              <column datatype='string' name='country' ordinal='0' />
+              <column datatype='integer' name='year' ordinal='1' />
+              <column datatype='string' name='iso_code' ordinal='2' />
+              <column datatype='string' name='region' ordinal='3' />
+              <column datatype='string' name='income_group' ordinal='4' />
+              <column datatype='integer' name='population' ordinal='5' />
+              <column datatype='real' name='gdp' ordinal='6' />
+              <column datatype='real' name='electricity_generation' ordinal='7' />
+              <column datatype='real' name='electricity_demand' ordinal='8' />
+              <column datatype='real' name='electricity_demand_per_capita' ordinal='9' />
+              <column datatype='real' name='net_elec_imports' ordinal='10' />
+              <column datatype='real' name='net_elec_imports_share_demand' ordinal='11' />
+              <column datatype='real' name='gas_production' ordinal='12' />
+              <column datatype='real' name='gas_consumption' ordinal='13' />
+              <column datatype='real' name='gas_prod_per_capita' ordinal='14' />
+              <column datatype='real' name='gas_share_elec' ordinal='15' />
+              <column datatype='real' name='gas_share_energy' ordinal='16' />
+              <column datatype='real' name='oil_production' ordinal='17' />
+              <column datatype='real' name='oil_consumption' ordinal='18' />
+              <column datatype='real' name='renewables_electricity' ordinal='19' />
+              <column datatype='real' name='renewables_share_elec' ordinal='20' />
+              <column datatype='real' name='fossil_electricity' ordinal='21' />
+              <column datatype='real' name='fossil_share_elec' ordinal='22' />
+              <column datatype='real' name='energy_per_capita' ordinal='23' />
+              <column datatype='real' name='greenhouse_gas_emissions' ordinal='24' />
+              <column datatype='real' name='gdp_worldbank_usd' ordinal='25' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.0a15p311jk68fz17ol2wd05uhnsw' name='Electricity_Tariffs' table='[Electricity_Tariffs$]' type='table'>
+            <columns gridOrigin='A1:D78:no:A1:D78:0' header='yes' outcome='6'>
+              <column datatype='integer' name='year' ordinal='0' />
+              <column datatype='integer' name='tier' ordinal='1' />
+              <column datatype='string' name='kwh_range' ordinal='2' />
+              <column datatype='real' name='price_EGP_per_kwh' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.0a15p311jk68fz17ol2wd05uhnsw' name='Suez_Canal_Revenue' table='[Suez_Canal_Revenue$]' type='table'>
+            <columns gridOrigin='A1:C23:no:A1:C23:0' header='yes' outcome='6'>
+              <column datatype='string' name='year_type' ordinal='0' />
+              <column datatype='integer' name='year' ordinal='1' />
+              <column datatype='real' name='revenue_usd_billion' ordinal='2' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.0a15p311jk68fz17ol2wd05uhnsw' name='Zohr_National_Gas_Timeline' table='[Zohr_National_Gas_Timeline$]' type='table'>
+            <columns gridOrigin='A1:D21:no:A1:D21:0' header='yes' outcome='6'>
+              <column datatype='integer' name='year' ordinal='0' />
+              <column datatype='string' name='month' ordinal='1' />
+              <column datatype='real' name='national_gas_production_bcf_d' ordinal='2' />
+              <column datatype='real' name='zohr_bcf_d' ordinal='3' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[country]' value='[Annual_Panel_16countries].[country]' />
+          <map key='[electricity_demand]' value='[Annual_Panel_16countries].[electricity_demand]' />
+          <map key='[electricity_demand_per_capita]' value='[Annual_Panel_16countries].[electricity_demand_per_capita]' />
+          <map key='[electricity_generation]' value='[Annual_Panel_16countries].[electricity_generation]' />
+          <map key='[energy_per_capita]' value='[Annual_Panel_16countries].[energy_per_capita]' />
+          <map key='[fossil_electricity]' value='[Annual_Panel_16countries].[fossil_electricity]' />
+          <map key='[fossil_share_elec]' value='[Annual_Panel_16countries].[fossil_share_elec]' />
+          <map key='[gas_consumption]' value='[Annual_Panel_16countries].[gas_consumption]' />
+          <map key='[gas_prod_per_capita]' value='[Annual_Panel_16countries].[gas_prod_per_capita]' />
+          <map key='[gas_production]' value='[Annual_Panel_16countries].[gas_production]' />
+          <map key='[gas_share_elec]' value='[Annual_Panel_16countries].[gas_share_elec]' />
+          <map key='[gas_share_energy]' value='[Annual_Panel_16countries].[gas_share_energy]' />
+          <map key='[gdp]' value='[Annual_Panel_16countries].[gdp]' />
+          <map key='[gdp_worldbank_usd]' value='[Annual_Panel_16countries].[gdp_worldbank_usd]' />
+          <map key='[greenhouse_gas_emissions]' value='[Annual_Panel_16countries].[greenhouse_gas_emissions]' />
+          <map key='[income_group]' value='[Annual_Panel_16countries].[income_group]' />
+          <map key='[iso_code]' value='[Annual_Panel_16countries].[iso_code]' />
+          <map key='[kwh_range]' value='[Electricity_Tariffs].[kwh_range]' />
+          <map key='[month]' value='[Zohr_National_Gas_Timeline].[month]' />
+          <map key='[national_gas_production_bcf_d]' value='[Zohr_National_Gas_Timeline].[national_gas_production_bcf_d]' />
+          <map key='[net_elec_imports]' value='[Annual_Panel_16countries].[net_elec_imports]' />
+          <map key='[net_elec_imports_share_demand]' value='[Annual_Panel_16countries].[net_elec_imports_share_demand]' />
+          <map key='[oil_consumption]' value='[Annual_Panel_16countries].[oil_consumption]' />
+          <map key='[oil_production]' value='[Annual_Panel_16countries].[oil_production]' />
+          <map key='[population]' value='[Annual_Panel_16countries].[population]' />
+          <map key='[price_EGP_per_kwh]' value='[Electricity_Tariffs].[price_EGP_per_kwh]' />
+          <map key='[region]' value='[Annual_Panel_16countries].[region]' />
+          <map key='[renewables_electricity]' value='[Annual_Panel_16countries].[renewables_electricity]' />
+          <map key='[renewables_share_elec]' value='[Annual_Panel_16countries].[renewables_share_elec]' />
+          <map key='[revenue_usd_billion]' value='[Suez_Canal_Revenue].[revenue_usd_billion]' />
+          <map key='[tier]' value='[Electricity_Tariffs].[tier]' />
+          <map key='[year (Electricity!Tariffs)]' value='[Electricity_Tariffs].[year]' />
+          <map key='[year (Suez!Canal!Revenue)]' value='[Suez_Canal_Revenue].[year]' />
+          <map key='[year (Zohr!National!Gas!Timeline)]' value='[Zohr_National_Gas_Timeline].[year]' />
+          <map key='[year]' value='[Annual_Panel_16countries].[year]' />
+          <map key='[year_type]' value='[Suez_Canal_Revenue].[year_type]' />
+          <map key='[zohr_bcf_d]' value='[Zohr_National_Gas_Timeline].[zohr_bcf_d]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Annual_Panel_16countries]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:Z385:no:A1:Z385:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Electricity_Tariffs]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:D78:no:A1:D78:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Suez_Canal_Revenue]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C23:no:A1:C23:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Zohr_National_Gas_Timeline]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:D21:no:A1:D21:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[country]</local-name>
+            <parent-name>[Annual_Panel_16countries]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Annual!Panel!16countries_AF467EC9216245AFA438317BBA2EFF6C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year]</local-name>
+            <parent-name>[Annual_Panel_16countries]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Annual!Panel!16countries_AF467EC9216245AFA438317BBA2EFF6C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>iso_code</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[iso_code]</local-name>
+            <parent-name>[Annual_Panel_16countries]</parent-name>
+            <remote-alias>iso_code</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Annual!Panel!16countries_AF467EC9216245AFA438317BBA2EFF6C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>region</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[region]</local-name>
+            <parent-name>[Annual_Panel_16countries]</parent-name>
+            <remote-alias>region</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Annual!Panel!16countries_AF467EC9216245AFA438317BBA2EFF6C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>income_group</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[income_group]</local-name>
+            <parent-name>[Annual_Panel_16countries]</parent-name>
+            <remote-alias>income_group</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Annual!Panel!16countries_AF467EC9216245AFA438317BBA2EFF6C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>population</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[population]</local-name>
+            <parent-name>[Annual_Panel_16countries]</parent-name>
+            <remote-alias>population</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Annual!Panel!16countries_AF467EC9216245AFA438317BBA2EFF6C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gdp</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[gdp]</local-name>
+            <parent-name>[Annual_Panel_16countries]</parent-name>
+            <remote-alias>gdp</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Annual!Panel!16countries_AF467EC9216245AFA438317BBA2EFF6C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>electricity_generation</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[electricity_generation]</local-name>
+            <parent-name>[Annual_Panel_16countries]</parent-name>
+            <remote-alias>electricity_generation</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Annual!Panel!16countries_AF467EC9216245AFA438317BBA2EFF6C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>electricity_demand</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[electricity_demand]</local-name>
+            <parent-name>[Annual_Panel_16countries]</parent-name>
+            <remote-alias>electricity_demand</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Annual!Panel!16countries_AF467EC9216245AFA438317BBA2EFF6C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>electricity_demand_per_capita</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[electricity_demand_per_capita]</local-name>
+            <parent-name>[Annual_Panel_16countries]</parent-name>
+            <remote-alias>electricity_demand_per_capita</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Annual!Panel!16countries_AF467EC9216245AFA438317BBA2EFF6C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>net_elec_imports</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[net_elec_imports]</local-name>
+            <parent-name>[Annual_Panel_16countries]</parent-name>
+            <remote-alias>net_elec_imports</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Annual!Panel!16countries_AF467EC9216245AFA438317BBA2EFF6C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>net_elec_imports_share_demand</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[net_elec_imports_share_demand]</local-name>
+            <parent-name>[Annual_Panel_16countries]</parent-name>
+            <remote-alias>net_elec_imports_share_demand</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Annual!Panel!16countries_AF467EC9216245AFA438317BBA2EFF6C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gas_production</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[gas_production]</local-name>
+            <parent-name>[Annual_Panel_16countries]</parent-name>
+            <remote-alias>gas_production</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Annual!Panel!16countries_AF467EC9216245AFA438317BBA2EFF6C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gas_consumption</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[gas_consumption]</local-name>
+            <parent-name>[Annual_Panel_16countries]</parent-name>
+            <remote-alias>gas_consumption</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Annual!Panel!16countries_AF467EC9216245AFA438317BBA2EFF6C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gas_prod_per_capita</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[gas_prod_per_capita]</local-name>
+            <parent-name>[Annual_Panel_16countries]</parent-name>
+            <remote-alias>gas_prod_per_capita</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Annual!Panel!16countries_AF467EC9216245AFA438317BBA2EFF6C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gas_share_elec</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[gas_share_elec]</local-name>
+            <parent-name>[Annual_Panel_16countries]</parent-name>
+            <remote-alias>gas_share_elec</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Annual!Panel!16countries_AF467EC9216245AFA438317BBA2EFF6C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gas_share_energy</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[gas_share_energy]</local-name>
+            <parent-name>[Annual_Panel_16countries]</parent-name>
+            <remote-alias>gas_share_energy</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Annual!Panel!16countries_AF467EC9216245AFA438317BBA2EFF6C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>oil_production</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[oil_production]</local-name>
+            <parent-name>[Annual_Panel_16countries]</parent-name>
+            <remote-alias>oil_production</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Annual!Panel!16countries_AF467EC9216245AFA438317BBA2EFF6C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>oil_consumption</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[oil_consumption]</local-name>
+            <parent-name>[Annual_Panel_16countries]</parent-name>
+            <remote-alias>oil_consumption</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Annual!Panel!16countries_AF467EC9216245AFA438317BBA2EFF6C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>renewables_electricity</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[renewables_electricity]</local-name>
+            <parent-name>[Annual_Panel_16countries]</parent-name>
+            <remote-alias>renewables_electricity</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Annual!Panel!16countries_AF467EC9216245AFA438317BBA2EFF6C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>renewables_share_elec</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[renewables_share_elec]</local-name>
+            <parent-name>[Annual_Panel_16countries]</parent-name>
+            <remote-alias>renewables_share_elec</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Annual!Panel!16countries_AF467EC9216245AFA438317BBA2EFF6C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fossil_electricity</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[fossil_electricity]</local-name>
+            <parent-name>[Annual_Panel_16countries]</parent-name>
+            <remote-alias>fossil_electricity</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Annual!Panel!16countries_AF467EC9216245AFA438317BBA2EFF6C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fossil_share_elec</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[fossil_share_elec]</local-name>
+            <parent-name>[Annual_Panel_16countries]</parent-name>
+            <remote-alias>fossil_share_elec</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Annual!Panel!16countries_AF467EC9216245AFA438317BBA2EFF6C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>energy_per_capita</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[energy_per_capita]</local-name>
+            <parent-name>[Annual_Panel_16countries]</parent-name>
+            <remote-alias>energy_per_capita</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Annual!Panel!16countries_AF467EC9216245AFA438317BBA2EFF6C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>greenhouse_gas_emissions</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[greenhouse_gas_emissions]</local-name>
+            <parent-name>[Annual_Panel_16countries]</parent-name>
+            <remote-alias>greenhouse_gas_emissions</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Annual!Panel!16countries_AF467EC9216245AFA438317BBA2EFF6C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gdp_worldbank_usd</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[gdp_worldbank_usd]</local-name>
+            <parent-name>[Annual_Panel_16countries]</parent-name>
+            <remote-alias>gdp_worldbank_usd</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Annual!Panel!16countries_AF467EC9216245AFA438317BBA2EFF6C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year (Electricity!Tariffs)]</local-name>
+            <parent-name>[Electricity_Tariffs]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Electricity!Tariffs_5E649A3AD49147668795D6788481E949]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tier</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[tier]</local-name>
+            <parent-name>[Electricity_Tariffs]</parent-name>
+            <remote-alias>tier</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Electricity!Tariffs_5E649A3AD49147668795D6788481E949]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>kwh_range</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[kwh_range]</local-name>
+            <parent-name>[Electricity_Tariffs]</parent-name>
+            <remote-alias>kwh_range</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Electricity!Tariffs_5E649A3AD49147668795D6788481E949]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price_EGP_per_kwh</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[price_EGP_per_kwh]</local-name>
+            <parent-name>[Electricity_Tariffs]</parent-name>
+            <remote-alias>price_EGP_per_kwh</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Electricity!Tariffs_5E649A3AD49147668795D6788481E949]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year_type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[year_type]</local-name>
+            <parent-name>[Suez_Canal_Revenue]</parent-name>
+            <remote-alias>year_type</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Suez!Canal!Revenue_4A2454A22842426A8EBFF10B0E8E4248]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year (Suez!Canal!Revenue)]</local-name>
+            <parent-name>[Suez_Canal_Revenue]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Suez!Canal!Revenue_4A2454A22842426A8EBFF10B0E8E4248]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>revenue_usd_billion</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[revenue_usd_billion]</local-name>
+            <parent-name>[Suez_Canal_Revenue]</parent-name>
+            <remote-alias>revenue_usd_billion</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Suez!Canal!Revenue_4A2454A22842426A8EBFF10B0E8E4248]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year (Zohr!National!Gas!Timeline)]</local-name>
+            <parent-name>[Zohr_National_Gas_Timeline]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Zohr!National!Gas!Timeline_45028ED5A473491E93D6877CC13ECEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[month]</local-name>
+            <parent-name>[Zohr_National_Gas_Timeline]</parent-name>
+            <remote-alias>month</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Zohr!National!Gas!Timeline_45028ED5A473491E93D6877CC13ECEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>national_gas_production_bcf_d</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[national_gas_production_bcf_d]</local-name>
+            <parent-name>[Zohr_National_Gas_Timeline]</parent-name>
+            <remote-alias>national_gas_production_bcf_d</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Zohr!National!Gas!Timeline_45028ED5A473491E93D6877CC13ECEAD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>zohr_bcf_d</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[zohr_bcf_d]</local-name>
+            <parent-name>[Zohr_National_Gas_Timeline]</parent-name>
+            <remote-alias>zohr_bcf_d</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Zohr!National!Gas!Timeline_45028ED5A473491E93D6877CC13ECEAD]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Net Balance' datatype='real' name='[Calculation_2034946556973056]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[gas_production] - [gas_consumption]' />
+      </column>
+      <column caption='Annual_Panel_16countries' datatype='table' name='[__tableau_internal_object_id__].[Annual!Panel!16countries_AF467EC9216245AFA438317BBA2EFF6C]' role='measure' type='quantitative' />
+      <column caption='Electricity_Tariffs' datatype='table' name='[__tableau_internal_object_id__].[Electricity!Tariffs_5E649A3AD49147668795D6788481E949]' role='measure' type='quantitative' />
+      <column caption='Suez_Canal_Revenue' datatype='table' name='[__tableau_internal_object_id__].[Suez!Canal!Revenue_4A2454A22842426A8EBFF10B0E8E4248]' role='measure' type='quantitative' />
+      <column caption='Zohr_National_Gas_Timeline' datatype='table' name='[__tableau_internal_object_id__].[Zohr!National!Gas!Timeline_45028ED5A473491E93D6877CC13ECEAD]' role='measure' type='quantitative' />
+      <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Electricity Demand' datatype='real' name='[electricity_demand]' role='measure' type='quantitative' />
+      <column caption='Electricity Demand Per Capita' datatype='real' name='[electricity_demand_per_capita]' role='measure' type='quantitative' />
+      <column caption='Electricity Generation' datatype='real' name='[electricity_generation]' role='measure' type='quantitative' />
+      <column caption='Energy Per Capita' datatype='real' name='[energy_per_capita]' role='measure' type='quantitative' />
+      <column caption='Fossil Electricity' datatype='real' name='[fossil_electricity]' role='measure' type='quantitative' />
+      <column caption='Fossil Share Elec' datatype='real' name='[fossil_share_elec]' role='measure' type='quantitative' />
+      <column caption='Gas Consumption' datatype='real' name='[gas_consumption]' role='measure' type='quantitative' />
+      <column caption='Gas Prod Per Capita' datatype='real' name='[gas_prod_per_capita]' role='measure' type='quantitative' />
+      <column caption='Gas Production' datatype='real' name='[gas_production]' role='measure' type='quantitative' />
+      <column caption='Gas Share Elec' datatype='real' name='[gas_share_elec]' role='measure' type='quantitative' />
+      <column caption='Gas Share Energy' datatype='real' name='[gas_share_energy]' role='measure' type='quantitative' />
+      <column caption='Gdp' datatype='real' name='[gdp]' role='measure' type='quantitative' />
+      <column caption='Gdp Worldbank Usd' datatype='real' name='[gdp_worldbank_usd]' role='measure' type='quantitative' />
+      <column caption='Greenhouse Gas Emissions' datatype='real' name='[greenhouse_gas_emissions]' role='measure' type='quantitative' />
+      <column caption='Income Group' datatype='string' name='[income_group]' role='dimension' type='nominal' />
+      <column caption='Iso Code' datatype='string' name='[iso_code]' role='dimension' type='nominal' />
+      <column caption='Kwh Range' datatype='string' name='[kwh_range]' role='dimension' type='nominal' />
+      <column caption='Month' datatype='string' name='[month]' role='dimension' type='nominal' />
+      <column caption='National Gas Production Bcf D' datatype='real' name='[national_gas_production_bcf_d]' role='measure' type='quantitative' />
+      <column caption='Net Elec Imports' datatype='real' name='[net_elec_imports]' role='measure' type='quantitative' />
+      <column caption='Net Elec Imports Share Demand' datatype='real' name='[net_elec_imports_share_demand]' role='measure' type='quantitative' />
+      <column caption='Oil Consumption' datatype='real' name='[oil_consumption]' role='measure' type='quantitative' />
+      <column caption='Oil Production' datatype='real' name='[oil_production]' role='measure' type='quantitative' />
+      <column caption='Population' datatype='integer' name='[population]' role='measure' type='quantitative' />
+      <column caption='price EGP per kwh' datatype='real' name='[price_EGP_per_kwh]' role='measure' type='quantitative' />
+      <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+      <column caption='Renewables Electricity' datatype='real' name='[renewables_electricity]' role='measure' type='quantitative' />
+      <column caption='Renewables Share Elec' datatype='real' name='[renewables_share_elec]' role='measure' type='quantitative' />
+      <column caption='Revenue Usd Billion' datatype='real' name='[revenue_usd_billion]' role='measure' type='quantitative' />
+      <column caption='Tier' datatype='integer' name='[tier]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[year (Electricity!Tariffs)]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[year (Suez!Canal!Revenue)]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[year (Zohr!National!Gas!Timeline)]' role='dimension' type='quantitative' />
+      <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+      <column caption='Year Type' datatype='string' name='[year_type]' role='dimension' type='nominal' />
+      <column caption='Zohr Bcf D' datatype='real' name='[zohr_bcf_d]' role='measure' type='quantitative' />
+      <column-instance column='[gas_production]' derivation='Avg' name='[avg:gas_production:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[electricity_demand]' derivation='Sum' name='[sum:electricity_demand:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[electricity_demand_per_capita]' derivation='Sum' name='[sum:electricity_demand_per_capita:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[electricity_generation]' derivation='Sum' name='[sum:electricity_generation:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[energy_per_capita]' derivation='Sum' name='[sum:energy_per_capita:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[fossil_electricity]' derivation='Sum' name='[sum:fossil_electricity:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[fossil_share_elec]' derivation='Sum' name='[sum:fossil_share_elec:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[gas_consumption]' derivation='Sum' name='[sum:gas_consumption:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[gas_prod_per_capita]' derivation='Sum' name='[sum:gas_prod_per_capita:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[gas_production]' derivation='Sum' name='[sum:gas_production:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[gas_share_elec]' derivation='Sum' name='[sum:gas_share_elec:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[gas_share_energy]' derivation='Sum' name='[sum:gas_share_energy:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[gdp]' derivation='Sum' name='[sum:gdp:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[gdp_worldbank_usd]' derivation='Sum' name='[sum:gdp_worldbank_usd:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[greenhouse_gas_emissions]' derivation='Sum' name='[sum:greenhouse_gas_emissions:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[national_gas_production_bcf_d]' derivation='Sum' name='[sum:national_gas_production_bcf_d:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[net_elec_imports]' derivation='Sum' name='[sum:net_elec_imports:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[net_elec_imports_share_demand]' derivation='Sum' name='[sum:net_elec_imports_share_demand:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[oil_consumption]' derivation='Sum' name='[sum:oil_consumption:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[oil_production]' derivation='Sum' name='[sum:oil_production:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[population]' derivation='Sum' name='[sum:population:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[price_EGP_per_kwh]' derivation='Sum' name='[sum:price_EGP_per_kwh:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[renewables_electricity]' derivation='Sum' name='[sum:renewables_electricity:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[renewables_share_elec]' derivation='Sum' name='[sum:renewables_share_elec:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[revenue_usd_billion]' derivation='Sum' name='[sum:revenue_usd_billion:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[tier]' derivation='Sum' name='[sum:tier:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[zohr_bcf_d]' derivation='Sum' name='[sum:zohr_bcf_d:qk]' pivot='key' type='quantitative' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' palette='tableau-10-medium' type='palette'>
+            <map to='#0000ff'>
+              <bucket>&quot;[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:gas_production:qk]&quot;</bucket>
+            </map>
+            <map to='#67bf5c'>
+              <bucket>&quot;[federated.1o1oipp091upgn1frytnx1lacpyo].[__tableau_internal_object_id__].[cnt:Egypt!Energy!Project_3904E0BFC33D4E7FB61BBFEF229E259C:qk]&quot;</bucket>
+            </map>
+            <map to='#67bf5c'>
+              <bucket>&quot;[federated.1o1oipp091upgn1frytnx1lacpyo].[__tableau_internal_object_id__].[cnt:Suez!Canal!Revenue_8B29D0A36A824297A469CB22CC40D47C:qk]&quot;</bucket>
+            </map>
+            <map to='#67bf5c'>
+              <bucket>&quot;[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:gas_share_energy:qk]&quot;</bucket>
+            </map>
+            <map to='#6dccda'>
+              <bucket>&quot;[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:fossil_share_elec:qk]&quot;</bucket>
+            </map>
+            <map to='#6dccda'>
+              <bucket>&quot;[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:gas_prod_per_capita:qk]&quot;</bucket>
+            </map>
+            <map to='#6dccda'>
+              <bucket>&quot;[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:tier:qk]&quot;</bucket>
+            </map>
+            <map to='#729ece'>
+              <bucket>&quot;[federated.1o1oipp091upgn1frytnx1lacpyo]&quot;</bucket>
+            </map>
+            <map to='#729ece'>
+              <bucket>&quot;[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:oil_consumption:qk]&quot;</bucket>
+            </map>
+            <map to='#729ece'>
+              <bucket>&quot;[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:zohr_bcf_d:qk]&quot;</bucket>
+            </map>
+            <map to='#a2a2a2'>
+              <bucket>&quot;[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:energy_per_capita:qk]&quot;</bucket>
+            </map>
+            <map to='#a2a2a2'>
+              <bucket>&quot;[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:net_elec_imports:qk]&quot;</bucket>
+            </map>
+            <map to='#a2a2a2'>
+              <bucket>&quot;[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:renewables_share_elec:qk]&quot;</bucket>
+            </map>
+            <map to='#a8786e'>
+              <bucket>&quot;[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:electricity_demand_per_capita:qk]&quot;</bucket>
+            </map>
+            <map to='#a8786e'>
+              <bucket>&quot;[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:greenhouse_gas_emissions:qk]&quot;</bucket>
+            </map>
+            <map to='#a8786e'>
+              <bucket>&quot;[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:population:qk]&quot;</bucket>
+            </map>
+            <map to='#ad8bc9'>
+              <bucket>&quot;[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:electricity_demand:qk]&quot;</bucket>
+            </map>
+            <map to='#ad8bc9'>
+              <bucket>&quot;[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:gdp_worldbank_usd:qk]&quot;</bucket>
+            </map>
+            <map to='#ad8bc9'>
+              <bucket>&quot;[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:oil_production:qk]&quot;</bucket>
+            </map>
+            <map to='#cdcc5d'>
+              <bucket>&quot;[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:fossil_electricity:qk]&quot;</bucket>
+            </map>
+            <map to='#cdcc5d'>
+              <bucket>&quot;[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:net_elec_imports_share_demand:qk]&quot;</bucket>
+            </map>
+            <map to='#cdcc5d'>
+              <bucket>&quot;[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:revenue_usd_billion:qk]&quot;</bucket>
+            </map>
+            <map to='#ed665d'>
+              <bucket>&quot;[federated.1o1oipp091upgn1frytnx1lacpyo].[__tableau_internal_object_id__].[cnt:Electricity!Tariffs_6C3CDDA33A384B69A94DAE93C7510567:qk]&quot;</bucket>
+            </map>
+            <map to='#ed665d'>
+              <bucket>&quot;[federated.1o1oipp091upgn1frytnx1lacpyo].[__tableau_internal_object_id__].[cnt:Zohr!National!Gas!Timeline_20DA986826354E73A11F678B281B9BDC:qk]&quot;</bucket>
+            </map>
+            <map to='#ed665d'>
+              <bucket>&quot;[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:gdp:qk]&quot;</bucket>
+            </map>
+            <map to='#ed97ca'>
+              <bucket>&quot;[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:electricity_generation:qk]&quot;</bucket>
+            </map>
+            <map to='#ed97ca'>
+              <bucket>&quot;[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:national_gas_production_bcf_d:qk]&quot;</bucket>
+            </map>
+            <map to='#ed97ca'>
+              <bucket>&quot;[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:renewables_electricity:qk]&quot;</bucket>
+            </map>
+            <map to='#ff0000'>
+              <bucket>&quot;[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:gas_consumption:qk]&quot;</bucket>
+            </map>
+            <map to='#ff9e4a'>
+              <bucket>&quot;[federated.1o1oipp091upgn1frytnx1lacpyo].[avg:gas_production:qk]&quot;</bucket>
+            </map>
+            <map to='#ff9e4a'>
+              <bucket>&quot;[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:gas_share_elec:qk]&quot;</bucket>
+            </map>
+            <map to='#ff9e4a'>
+              <bucket>&quot;[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:price_EGP_per_kwh:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Egypt&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Annual_Panel_16countries' id='Annual!Panel!16countries_AF467EC9216245AFA438317BBA2EFF6C'>
+            <properties context=''>
+              <relation connection='excel-direct.0a15p311jk68fz17ol2wd05uhnsw' name='Annual_Panel_16countries' table='[Annual_Panel_16countries$]' type='table'>
+                <columns gridOrigin='A1:Z385:no:A1:Z385:0' header='yes' outcome='6'>
+                  <column datatype='string' name='country' ordinal='0' />
+                  <column datatype='integer' name='year' ordinal='1' />
+                  <column datatype='string' name='iso_code' ordinal='2' />
+                  <column datatype='string' name='region' ordinal='3' />
+                  <column datatype='string' name='income_group' ordinal='4' />
+                  <column datatype='integer' name='population' ordinal='5' />
+                  <column datatype='real' name='gdp' ordinal='6' />
+                  <column datatype='real' name='electricity_generation' ordinal='7' />
+                  <column datatype='real' name='electricity_demand' ordinal='8' />
+                  <column datatype='real' name='electricity_demand_per_capita' ordinal='9' />
+                  <column datatype='real' name='net_elec_imports' ordinal='10' />
+                  <column datatype='real' name='net_elec_imports_share_demand' ordinal='11' />
+                  <column datatype='real' name='gas_production' ordinal='12' />
+                  <column datatype='real' name='gas_consumption' ordinal='13' />
+                  <column datatype='real' name='gas_prod_per_capita' ordinal='14' />
+                  <column datatype='real' name='gas_share_elec' ordinal='15' />
+                  <column datatype='real' name='gas_share_energy' ordinal='16' />
+                  <column datatype='real' name='oil_production' ordinal='17' />
+                  <column datatype='real' name='oil_consumption' ordinal='18' />
+                  <column datatype='real' name='renewables_electricity' ordinal='19' />
+                  <column datatype='real' name='renewables_share_elec' ordinal='20' />
+                  <column datatype='real' name='fossil_electricity' ordinal='21' />
+                  <column datatype='real' name='fossil_share_elec' ordinal='22' />
+                  <column datatype='real' name='energy_per_capita' ordinal='23' />
+                  <column datatype='real' name='greenhouse_gas_emissions' ordinal='24' />
+                  <column datatype='real' name='gdp_worldbank_usd' ordinal='25' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='Electricity_Tariffs' id='Electricity!Tariffs_5E649A3AD49147668795D6788481E949'>
+            <properties context=''>
+              <relation connection='excel-direct.0a15p311jk68fz17ol2wd05uhnsw' name='Electricity_Tariffs' table='[Electricity_Tariffs$]' type='table'>
+                <columns gridOrigin='A1:D78:no:A1:D78:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='year' ordinal='0' />
+                  <column datatype='integer' name='tier' ordinal='1' />
+                  <column datatype='string' name='kwh_range' ordinal='2' />
+                  <column datatype='real' name='price_EGP_per_kwh' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='Suez_Canal_Revenue' id='Suez!Canal!Revenue_4A2454A22842426A8EBFF10B0E8E4248'>
+            <properties context=''>
+              <relation connection='excel-direct.0a15p311jk68fz17ol2wd05uhnsw' name='Suez_Canal_Revenue' table='[Suez_Canal_Revenue$]' type='table'>
+                <columns gridOrigin='A1:C23:no:A1:C23:0' header='yes' outcome='6'>
+                  <column datatype='string' name='year_type' ordinal='0' />
+                  <column datatype='integer' name='year' ordinal='1' />
+                  <column datatype='real' name='revenue_usd_billion' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='Zohr_National_Gas_Timeline' id='Zohr!National!Gas!Timeline_45028ED5A473491E93D6877CC13ECEAD'>
+            <properties context=''>
+              <relation connection='excel-direct.0a15p311jk68fz17ol2wd05uhnsw' name='Zohr_National_Gas_Timeline' table='[Zohr_National_Gas_Timeline$]' type='table'>
+                <columns gridOrigin='A1:D21:no:A1:D21:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='year' ordinal='0' />
+                  <column datatype='string' name='month' ordinal='1' />
+                  <column datatype='real' name='national_gas_production_bcf_d' ordinal='2' />
+                  <column datatype='real' name='zohr_bcf_d' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[year]' />
+              <expression op='[year (Electricity!Tariffs)]' />
+            </expression>
+            <first-end-point object-id='Annual!Panel!16countries_AF467EC9216245AFA438317BBA2EFF6C' />
+            <second-end-point object-id='Electricity!Tariffs_5E649A3AD49147668795D6788481E949' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[year]' />
+              <expression op='[year (Suez!Canal!Revenue)]' />
+            </expression>
+            <first-end-point object-id='Annual!Panel!16countries_AF467EC9216245AFA438317BBA2EFF6C' />
+            <second-end-point object-id='Suez!Canal!Revenue_4A2454A22842426A8EBFF10B0E8E4248' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[year]' />
+              <expression op='[year (Zohr!National!Gas!Timeline)]' />
+            </expression>
+            <first-end-point object-id='Annual!Panel!16countries_AF467EC9216245AFA438317BBA2EFF6C' />
+            <second-end-point object-id='Zohr!National!Gas!Timeline_45028ED5A473491E93D6877CC13ECEAD' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Avg Production'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Egypt_Energy_Project' name='federated.1o1oipp091upgn1frytnx1lacpyo' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1o1oipp091upgn1frytnx1lacpyo'>
+            <column-instance column='[gas_production]' derivation='Avg' name='[avg:gas_production:qk]' pivot='key' type='quantitative' />
+            <column caption='Gas Production' datatype='real' name='[gas_production]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1o1oipp091upgn1frytnx1lacpyo].[avg:gas_production:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='20'>&lt;</run>
+                <run fontsize='20'>[federated.1o1oipp091upgn1frytnx1lacpyo].[avg:gas_production:qk]</run>
+                <run fontsize='20'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{A5FD2FAF-2DB7-41A3-BC21-AEDBB5AF4323}' />
+    </worksheet>
+    <worksheet name='Electricity Growth 2000-2010'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Egypt_Energy_Project' name='federated.1o1oipp091upgn1frytnx1lacpyo' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1o1oipp091upgn1frytnx1lacpyo'>
+            <column caption='Electricity Generation' datatype='real' name='[electricity_generation]' role='measure' type='quantitative' />
+            <column-instance column='[year]' derivation='None' name='[none:year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[electricity_generation]' derivation='Sum' name='[sum:electricity_generation:qk]' pivot='key' type='quantitative' />
+            <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1o1oipp091upgn1frytnx1lacpyo].[none:year:qk]' included-values='in-range'>
+            <min>2000</min>
+            <max>2010</max>
+          </filter>
+          <slices>
+            <column>[federated.1o1oipp091upgn1frytnx1lacpyo].[none:year:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+          </pane>
+        </panes>
+        <rows>[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:electricity_generation:qk]</rows>
+        <cols>[federated.1o1oipp091upgn1frytnx1lacpyo].[none:year:qk]</cols>
+      </table>
+      <simple-id uuid='{77C8BABF-C422-4600-A18F-B20A17F6DB96}' />
+    </worksheet>
+    <worksheet name='Gas Balance 2000-2010'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Egypt_Energy_Project' name='federated.1o1oipp091upgn1frytnx1lacpyo' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1o1oipp091upgn1frytnx1lacpyo'>
+            <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column caption='Gas Consumption' datatype='real' name='[gas_consumption]' role='measure' type='quantitative' />
+            <column caption='Gas Production' datatype='real' name='[gas_production]' role='measure' type='quantitative' />
+            <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[year]' derivation='None' name='[none:year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gas_consumption]' derivation='Sum' name='[sum:gas_consumption:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gas_production]' derivation='Sum' name='[sum:gas_production:qk]' pivot='key' type='quantitative' />
+            <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1o1oipp091upgn1frytnx1lacpyo].[none:country:nk]'>
+            <groupfilter function='member' level='[none:country:nk]' member='&quot;Egypt&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='quantitative' column='[federated.1o1oipp091upgn1frytnx1lacpyo].[none:year:qk]' included-values='in-range'>
+            <min>2000</min>
+            <max>2010</max>
+          </filter>
+          <slices>
+            <column>[federated.1o1oipp091upgn1frytnx1lacpyo].[none:country:nk]</column>
+            <column>[federated.1o1oipp091upgn1frytnx1lacpyo].[none:year:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:gas_consumption:qk]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.1o1oipp091upgn1frytnx1lacpyo].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#4e79a7' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:gas_production:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.1o1oipp091upgn1frytnx1lacpyo].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#4e79a7' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:gas_consumption:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.1o1oipp091upgn1frytnx1lacpyo].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#e15759' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1o1oipp091upgn1frytnx1lacpyo].[sum:gas_production:qk] + [federated.1o1oipp091upgn1frytnx1lacpyo].[sum:gas_consumption:qk])</rows>
+        <cols>[federated.1o1oipp091upgn1frytnx1lacpyo].[none:year:qk]</cols>
+      </table>
+      <simple-id uuid='{206B82BC-7CBB-418A-A0C4-23D749414F4E}' />
+    </worksheet>
+    <worksheet name='KPI - Net Status'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Egypt_Energy_Project' name='federated.1o1oipp091upgn1frytnx1lacpyo' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1o1oipp091upgn1frytnx1lacpyo'>
+            <column caption='Net Balance' datatype='real' name='[Calculation_2034946556973056]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[gas_production] - [gas_consumption]' />
+            </column>
+            <column caption='Gas Consumption' datatype='real' name='[gas_consumption]' role='measure' type='quantitative' />
+            <column caption='Gas Production' datatype='real' name='[gas_production]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_2034946556973056]' derivation='Sum' name='[sum:Calculation_2034946556973056:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:Calculation_2034946556973056:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='20'>&lt;</run>
+                <run fontsize='20'>[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:Calculation_2034946556973056:qk]</run>
+                <run fontsize='20'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{B7285289-CC90-4858-96EB-6A1B2C15C08C}' />
+    </worksheet>
+    <worksheet name='Production vs Consumption Gap (2021-2023)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Egypt_Energy_Project' name='federated.1o1oipp091upgn1frytnx1lacpyo' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1o1oipp091upgn1frytnx1lacpyo'>
+            <column caption='Gas Consumption' datatype='real' name='[gas_consumption]' role='measure' type='quantitative' />
+            <column caption='Gas Production' datatype='real' name='[gas_production]' role='measure' type='quantitative' />
+            <column-instance column='[year]' derivation='None' name='[none:year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gas_consumption]' derivation='Sum' name='[sum:gas_consumption:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gas_production]' derivation='Sum' name='[sum:gas_production:qk]' pivot='key' type='quantitative' />
+            <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1o1oipp091upgn1frytnx1lacpyo].[none:year:qk]' included-values='in-range'>
+            <min>2000</min>
+            <max>2023</max>
+          </filter>
+          <slices>
+            <column>[federated.1o1oipp091upgn1frytnx1lacpyo].[none:year:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:gas_consumption:qk]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.1o1oipp091upgn1frytnx1lacpyo].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:gas_production:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.1o1oipp091upgn1frytnx1lacpyo].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:gas_consumption:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.1o1oipp091upgn1frytnx1lacpyo].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.1o1oipp091upgn1frytnx1lacpyo].[sum:gas_production:qk] + [federated.1o1oipp091upgn1frytnx1lacpyo].[sum:gas_consumption:qk])</rows>
+        <cols>[federated.1o1oipp091upgn1frytnx1lacpyo].[none:year:qk]</cols>
+      </table>
+      <simple-id uuid='{E32B58A8-99DD-4F9C-99D2-1FE49E8D8BB9}' />
+    </worksheet>
+    <worksheet name='The Gap 2011-2015'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Egypt_Energy_Project' name='federated.1o1oipp091upgn1frytnx1lacpyo' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1o1oipp091upgn1frytnx1lacpyo'>
+            <column caption='Gas Consumption' datatype='real' name='[gas_consumption]' role='measure' type='quantitative' />
+            <column caption='Gas Production' datatype='real' name='[gas_production]' role='measure' type='quantitative' />
+            <column-instance column='[year]' derivation='None' name='[none:year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gas_consumption]' derivation='Sum' name='[sum:gas_consumption:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gas_production]' derivation='Sum' name='[sum:gas_production:qk]' pivot='key' type='quantitative' />
+            <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1o1oipp091upgn1frytnx1lacpyo].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:gas_consumption:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:gas_production:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.1o1oipp091upgn1frytnx1lacpyo].[none:year:qk]' included-values='in-range'>
+            <min>2011</min>
+            <max>2015</max>
+          </filter>
+          <slices>
+            <column>[federated.1o1oipp091upgn1frytnx1lacpyo].[none:year:qk]</column>
+            <column>[federated.1o1oipp091upgn1frytnx1lacpyo].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1o1oipp091upgn1frytnx1lacpyo].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1o1oipp091upgn1frytnx1lacpyo].[Multiple Values]</rows>
+        <cols>[federated.1o1oipp091upgn1frytnx1lacpyo].[none:year:qk]</cols>
+      </table>
+      <simple-id uuid='{5F8148F2-C1FF-4CF0-9015-6FA0E2AF24E0}' />
+    </worksheet>
+    <worksheet name='Total Consumption'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Egypt_Energy_Project' name='federated.1o1oipp091upgn1frytnx1lacpyo' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1o1oipp091upgn1frytnx1lacpyo'>
+            <column caption='Gas Consumption' datatype='real' name='[gas_consumption]' role='measure' type='quantitative' />
+            <column-instance column='[gas_consumption]' derivation='Sum' name='[sum:gas_consumption:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:gas_consumption:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='20'>&lt;</run>
+                <run fontsize='20'>[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:gas_consumption:qk]</run>
+                <run fontsize='20'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{2678C44E-E72B-472A-9C2E-25B89C24EF00}' />
+    </worksheet>
+    <worksheet name='Total Production'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>Total Production</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Egypt_Energy_Project' name='federated.1o1oipp091upgn1frytnx1lacpyo' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1o1oipp091upgn1frytnx1lacpyo'>
+            <column caption='Gas Production' datatype='real' name='[gas_production]' role='measure' type='quantitative' />
+            <column-instance column='[gas_production]' derivation='Sum' name='[sum:gas_production:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:gas_production:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='20'>&lt;</run>
+                <run fontsize='20'>[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:gas_production:qk]</run>
+                <run fontsize='20'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{AF3BABA5-105B-4D4D-B4D4-0729F98081B3}' />
+    </worksheet>
+    <worksheet name='Zohr Discovery 2016-2020'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Egypt_Energy_Project' name='federated.1o1oipp091upgn1frytnx1lacpyo' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1o1oipp091upgn1frytnx1lacpyo'>
+            <column caption='Gas Consumption' datatype='real' name='[gas_consumption]' role='measure' type='quantitative' />
+            <column caption='Gas Production' datatype='real' name='[gas_production]' role='measure' type='quantitative' />
+            <column-instance column='[year]' derivation='None' name='[none:year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gas_consumption]' derivation='Sum' name='[sum:gas_consumption:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gas_production]' derivation='Sum' name='[sum:gas_production:qk]' pivot='key' type='quantitative' />
+            <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1o1oipp091upgn1frytnx1lacpyo].[none:year:qk]' included-values='in-range'>
+            <min>2016</min>
+            <max>2020</max>
+          </filter>
+          <slices>
+            <column>[federated.1o1oipp091upgn1frytnx1lacpyo].[none:year:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:gas_consumption:qk]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <color column='[federated.1o1oipp091upgn1frytnx1lacpyo].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:gas_production:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <color column='[federated.1o1oipp091upgn1frytnx1lacpyo].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1o1oipp091upgn1frytnx1lacpyo].[sum:gas_consumption:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <color column='[federated.1o1oipp091upgn1frytnx1lacpyo].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.1o1oipp091upgn1frytnx1lacpyo].[sum:gas_production:qk] + [federated.1o1oipp091upgn1frytnx1lacpyo].[sum:gas_consumption:qk])</rows>
+        <cols>[federated.1o1oipp091upgn1frytnx1lacpyo].[none:year:qk]</cols>
+      </table>
+      <simple-id uuid='{04F8A59F-44A9-49B7-86FA-0E5A33BCA2A0}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Electricity &amp; Gas Performance Dashboard'>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#333333' />
+        </style-rule>
+      </style>
+      <size maxheight='1000' maxwidth='1500' minheight='1000' minwidth='1500' sizing-mode='fixed' />
+      <zones>
+        <zone h='52200' id='3' name='The Gap 2011-2015' w='43867' x='44600' y='32800' />
+        <zone h='6400' id='4' name='The Gap 2011-2015' pane-specification-id='1' param='[federated.1o1oipp091upgn1frytnx1lacpyo].[:Measure Names]' type-v2='color' w='10067' x='89267' y='29700' />
+        <zone h='51800' id='6' name='Electricity Growth 2000-2010' w='42733' x='333' y='32900' />
+        <zone h='28400' id='8' param='horz' type-v2='layout-flow' w='99667' x='0' y='400'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#333333' />
+          </zone-style>
+        </zone>
+        <zone h='16900' id='9' name='Total Production' w='21067' x='2800' y='11400'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#ffffff' />
+          </zone-style>
+        </zone>
+        <zone h='16800' id='10' name='Total Consumption' w='20867' x='24867' y='11400'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#ffffff' />
+          </zone-style>
+        </zone>
+        <zone h='16900' id='11' name='Avg Production' w='23467' x='47000' y='11200'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#ffffff' />
+          </zone-style>
+        </zone>
+        <zone h='17000' id='12' name='KPI - Net Status' w='25333' x='71867' y='11300'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#ffffff' />
+          </zone-style>
+        </zone>
+        <zone forceUpdate='true' h='9000' id='13' type-v2='text' w='99533' x='133' y='1300'>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#e63946' fontsize='20'>Electricity &amp; Gas Performance Dashboard</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1450' minheight='1450' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='25' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98400' id='24' param='vert' type-v2='layout-flow' w='98934' x='533' y='800'>
+                <zone forceUpdate='true' h='9000' id='13' type-v2='text' w='99533' x='133' y='1300'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#e63946' fontsize='20'>Electricity &amp; Gas Performance Dashboard</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='169' h='16900' id='11' is-fixed='true' name='Avg Production' w='23467' x='47000' y='11200'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='170' h='17000' id='12' is-fixed='true' name='KPI - Net Status' w='25333' x='71867' y='11300'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='169' h='16900' id='9' is-fixed='true' name='Total Production' w='21067' x='2800' y='11400'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='168' h='16800' id='10' is-fixed='true' name='Total Consumption' w='20867' x='24867' y='11400'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='52200' id='3' is-fixed='true' name='The Gap 2011-2015' w='43867' x='44600' y='32800'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6400' id='4' name='The Gap 2011-2015' pane-specification-id='1' param='[federated.1o1oipp091upgn1frytnx1lacpyo].[:Measure Names]' type-v2='color' w='10067' x='89267' y='29700'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='51800' id='6' is-fixed='true' name='Electricity Growth 2000-2010' w='42733' x='333' y='32900'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{1D573003-BB86-4CDD-AFA4-7A4AE755630A}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='Natural Gas Analytics Dashboard'>
+      <style />
+      <size maxheight='1000' maxwidth='1200' minheight='1000' minwidth='1200' sizing-mode='fixed' />
+      <datasources>
+        <datasource caption='Egypt_Energy_Project' name='federated.1o1oipp091upgn1frytnx1lacpyo' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1o1oipp091upgn1frytnx1lacpyo'>
+        <column-instance column='[year]' derivation='None' name='[none:year:qk]' pivot='key' type='quantitative' />
+        <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='41500' id='3' name='Gas Balance 2000-2010' w='39929' x='44857' y='16100' />
+        <zone h='7000' id='4' name='Gas Balance 2000-2010' pane-specification-id='2' param='[federated.1o1oipp091upgn1frytnx1lacpyo].[:Measure Names]' type-v2='color' w='12143' x='86786' y='14700' />
+        <zone h='43250' id='5' name='Zohr Discovery 2016-2020' w='41214' x='71' y='16375' />
+        <zone h='39900' id='6' name='Production vs Consumption Gap (2021-2023)' w='51917' x='20833' y='59500' />
+        <zone h='7400' id='7' name='Production vs Consumption Gap (2021-2023)' param='[federated.1o1oipp091upgn1frytnx1lacpyo].[none:year:qk]' show-domain='false' show-null-ctrls='false' type-v2='filter' w='13500' x='86286' y='24800' />
+        <zone forceUpdate='true' h='6900' id='8' type-v2='text' w='99917' x='-250' y='2500'>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#e63946' fontsize='18'>Natural Gas Analytics Dashboard</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1100' minheight='1100' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='16' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98400' id='15' param='vert' type-v2='layout-flow' w='98666' x='667' y='800'>
+                <zone forceUpdate='true' h='6900' id='8' type-v2='text' w='99917' x='-250' y='2500'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#e63946' fontsize='18'>Natural Gas Analytics Dashboard</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='41500' id='3' is-fixed='true' name='Gas Balance 2000-2010' w='39929' x='44857' y='16100'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7000' id='4' name='Gas Balance 2000-2010' pane-specification-id='2' param='[federated.1o1oipp091upgn1frytnx1lacpyo].[:Measure Names]' type-v2='color' w='12143' x='86786' y='14700'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='43250' id='5' is-fixed='true' name='Zohr Discovery 2016-2020' w='41214' x='71' y='16375'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7400' id='7' name='Production vs Consumption Gap (2021-2023)' param='[federated.1o1oipp091upgn1frytnx1lacpyo].[none:year:qk]' show-domain='false' show-null-ctrls='false' type-v2='filter' w='13500' x='86286' y='24800'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='39900' id='6' is-fixed='true' name='Production vs Consumption Gap (2021-2023)' w='51917' x='20833' y='59500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{C4B8F688-27B9-404D-BDE1-005AF2C832AD}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='37'>
+    <window class='worksheet' name='Gas Balance 2000-2010'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.1o1oipp091upgn1frytnx1lacpyo].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1o1oipp091upgn1frytnx1lacpyo].[none:country:nk]</field>
+            <field>[federated.1o1oipp091upgn1frytnx1lacpyo].[none:year:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{519F12AE-67A2-4192-8C9D-79FAB3DBA6C8}' />
+    </window>
+    <window class='worksheet' name='Electricity Growth 2000-2010'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1o1oipp091upgn1frytnx1lacpyo].[none:year:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{FC314E9D-0B1E-4D98-B05C-747E5C4E7495}' />
+    </window>
+    <window class='worksheet' name='The Gap 2011-2015'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.1o1oipp091upgn1frytnx1lacpyo].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1o1oipp091upgn1frytnx1lacpyo].[:Measure Names]</field>
+            <field>[federated.1o1oipp091upgn1frytnx1lacpyo].[Multiple Values]</field>
+            <field>[federated.1o1oipp091upgn1frytnx1lacpyo].[none:year:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{56DDDE3B-4EF8-4998-AE22-488C84B6AD17}' />
+    </window>
+    <window class='worksheet' name='Zohr Discovery 2016-2020'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.1o1oipp091upgn1frytnx1lacpyo].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1o1oipp091upgn1frytnx1lacpyo].[none:year:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{88671A65-344D-4626-8220-51A6B7621EFA}' />
+    </window>
+    <window class='worksheet' name='Production vs Consumption Gap (2021-2023)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1o1oipp091upgn1frytnx1lacpyo].[none:year:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card pane-specification-id='3' param='[federated.1o1oipp091upgn1frytnx1lacpyo].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1o1oipp091upgn1frytnx1lacpyo].[none:year:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{18FED65B-8D72-4E4C-92B5-0082F338492A}' />
+    </window>
+    <window class='worksheet' name='Total Production'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{A9EB2A8F-0588-4FCA-AE8A-EF2E3A515E33}' />
+    </window>
+    <window class='worksheet' name='Total Consumption'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{870894C0-4D58-43BA-AF93-BBB34E0EE5ED}' />
+    </window>
+    <window class='worksheet' name='Avg Production'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{AB21D301-ADA8-4879-8939-B5F45A06FB3C}' />
+    </window>
+    <window class='worksheet' name='KPI - Net Status'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{34CC557E-3755-4EE6-AEE0-BE9512B4760E}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Electricity &amp; Gas Performance Dashboard'>
+      <viewpoints>
+        <viewpoint name='Avg Production'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Electricity Growth 2000-2010'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='KPI - Net Status'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='The Gap 2011-2015'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.1o1oipp091upgn1frytnx1lacpyo].[:Measure Names]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Total Consumption'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Total Production'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{261DDF95-9446-4317-97AC-9C68F6AD2458}' />
+    </window>
+    <window class='dashboard' name='Natural Gas Analytics Dashboard'>
+      <viewpoints>
+        <viewpoint name='Gas Balance 2000-2010'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.1o1oipp091upgn1frytnx1lacpyo].[:Measure Names]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Production vs Consumption Gap (2021-2023)'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Zohr Discovery 2016-2020'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{B23692DE-6BD6-4C55-AA7E-649675328D8B}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Avg Production' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAADU0lEQVR4nO3XPavXZRjA8evvCYk6gYTgEXwg1BJraBAaggi3loakuTfRVC8kWmpLmuNs
+      NWghEQWdDCkIIQkbDCrzIet0fi3WO5AD5/v5TDf3tVzLl5t7tSzLMhC1b7cXgN0kANIEQJoA
+      SBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0
+      AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMA
+      aQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAm
+      ANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIg
+      TQCkCYA0AZAmANIEQJoASBMAaY/s9gLwsPzz17354vPL8/2167Nx9NSce/nF2b+2mvt3fp/N
+      zc3Z3n/AC8De9fP1azPrh+b8+dfn8GN35/0LH82ysz3vvfvOnHnh3Jw9ddALwN515OSzc+TB
+      +dTpM/Pptxfn3m83ZnXgxJw+vjEzhwTA3nbjxx/mypWt+eSzrXnzrbfn7s1v5tEnNx5MVwJg
+      bzt87MRsHHlqnjvzzFz44MN549Wzs/z56/9zfwD2rDu3/5idZWbf2tpsHDs592/9Mo8fPD43
+      f7o62zvLbN+/PatlWZbdXhQehqtfXpqPL2/N+hPrc/vWrXnpldfm+aePzndfXZzNS1/Paudv
+      AbC3Lcsyy7LMarWa1Wr13+3s7CwzsxIAbf4ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQ
+      JgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkC
+      IE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDS
+      BECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0A
+      pAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApP0LVH9xHUams8cA
+      AAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Electricity &amp; Gas Performance Dashboard' width='192'>
+      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
+      ueeeW/juui59fX2cPHnyhqfAm2++yZtvvsm5c+eIRqN0dXXxi1/8glOnTjE1NYVlWezevZuT
+      J09uaH+Khdaa5557jpGREQDa2tro7+8nm80yMzODUopHHnmEN95444b9qqqqqKqqYsuWLaTT
+      aaampnBdl/379zMyMkJDQwMXLlwgmUySy93+7eylTkkGgO/7t/0+PT3Ntm3baG5uJplMLmx3
+      XZdnn32WZDJJf38/juPQ0dFBV1cX9913H9/61rc4ffo0tbW1t8iickBrfcOa2q6uLg4fPsz9
+      99/PgQMHqKurA2BiYoIf/vCHnDhxgm9/+9u0tLQwMDDA8ePHqays5IMPPqCmpoannnqKmpqa
+      YnVnXdiUL8nbsmULP/7xj7Ftm6997Wt8/PHHBEHAU089xYsvvkg6PVcKJJPJcPr0aZRSPPjg
+      g5w8eRLHcYjFYsTjca5du1bknhQWKSVVVVXEYjFqamq4fPkyDz30EF988QWxWIxPPvmETz75
+      BCklvu8zOjpKfX09kUiEiooKhoeHF24+dXV1JBIJYrEYSimGhoYYGRlZ91KFG01JLorv7u6m
+      ra0N27b54osvAGhvb8d1Xc6ePcvw8DD33XcfWmtee+01HnjgAV599VUefvjhhQFwX18fIyMj
+      PPbYY/i+z6uvvko2O1eTpquri88++2xD+gLFWxRv2zZ79uxZ+H7y5Emqq6vZvXs3H374IalU
+      auH/6urqSKVSHD16lNdff52uri5qa2s5fvw4mUyGjo4O2tra6OvrI5lM0tvbixCCDz74YMMK
+      /RZiUXxJBkBYtmzZwsDAQLGbsSybpSpELBYjnU6XZNugMAGwKSXQzZTyxb+ZWDyeKhc2t4Az
+      GNaICQBDWWMCwFDWmAAwlDUmAAxljQkAQ1ljAsBQ1pgAMJQ1JgAMZY0JAENZs+JUCCHEps/8
+      KxbipveNKaXMuVwFS52zm3ODwrLivZVSZbeUsFCY87h+rPVGYm5DhrLGBIChrDEBYChrTAAY
+      yhoTAIayxgSAoawxAWAoa0wAGMoaEwCGssYEgKGssQByudyGFTcyGG5muTSbjaifZMFczchS
+      LYZk+PJTzMRAI4EMZc2mDIBOFeGAinCXkNxrRXGXsYshWPxgrRCKw8pe+O4guUdFcBBElvFR
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Electricity Growth 2000-2010' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Gas Balance 2000-2010' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='KPI - Net Status' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAADU0lEQVR4nO3XvavXBRTA4fPT6zVCSHJIiISyF6RysqCg3BpqC6IgsKVJ6B9KaGgwghxq
+      jLZQiKRB6GW9hKHStXzLl5t+24T24oKf5xnPdJYPh7NalmUZiNqx3QvAdhIAaQIgTQCkCYA0
+      AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMA
+      aQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAm
+      ANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIg
+      TQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIE
+      QJoASBMAaQIgTQCkCYC0te1eAP4Pmxc25vwfd+fwoadmZubypfNz+vSZ2bx2Z4688tq88MyB
+      mREAD6AvT56Yjc2rs77n2fsB/PLzj/PiS6/Po3vW5rNPPp6d7x6fQ48/IgAePEfffGd277gy
+      J0+duz979egbMzOzLMs8feCx+evW3zPjAvAA2rt379y8euVfs2XZmnNnf5iz35+ZGw8/MR8d
+      3DcznmAiVqtdc/jIy/PBh8fn4O7L8+25jZkRAAX37s7V69dnZjVr6+vz/HNPzq+/XZxluTer
+      ZVmW7d4P/jO3/pwTn34+W3duzqXfb8z+/fvmrbffm+++PjUXr23NQ7t2zu1lfY4de39uX/hJ
+      AEQsyyyzzLLMrFarWa1W881XXwiArq2tLQHQ5gkmTQCkCYA0AZAmANIEQJoASBMAaQIgTQCk
+      CYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoA
+      SBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0
+      AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMA
+      aQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaf8AFmR4ok/1D1sA
+      AAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Natural Gas Analytics Dashboard' width='192'>
+      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
+      RAAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Production vs Consumption Gap (2021-2023)' width='192'>
+      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
+      O4C4s26jLfv/oxkA+UfrJNUAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='The Gap 2011-2015' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Total Consumption' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAADmUlEQVR4nO3Yv6vXVRzH8df36y2p7GpbN5eCImwQQ2mooRobgkRxuFNTBEH4xzREgzY0
+      BOEQFWS37Na9mYZ2yaKgW90g1Gi5iZClt++nJezX0NaN7+vxGN/ncDjLEw5nNAzDECg13uwL
+      wGYSANUEQDUBUE0AVBMA1QRANQFQTQBUEwDVBEA1AVBNAFQTANUEQDUBUE0AVBMA1QRANQFQ
+      TQBUEwDVBEA1AVBNAFQTANUEQDUBUE0AVBMA1QRANQFQTQBUEwDVBEA1AVBNAFQTANUEQDUB
+      UE0AVBMA1QRANQFQTQBUEwDVBEA1AVBNAFQTANUEQDUBUE0AVBMA1QRANQFQTQBUEwDVBEA1
+      AVBNAFQTANUEQDUBUE0AVBMA1QRANQFQTQBUEwDVBEA1AVBNAFQTANUEQDUBUE0AVBMA1QRA
+      NQFQTQBUEwDVBEA1AVBNAFQTANUEQDUBUE0AVBMA1QRANQFQTQBUEwBT4+qVyzl56kyGP83W
+      vljJi0eP5qNPV/+2e8jp9xcEwHQ4d+qdPPf8kbx5/L1Mfp+tf/d5Xln4OPsPHMjqydez8s0P
+      1/evnl3Mwol3BcB0uHPX3hw+/EzmdtxyffbBicU8MT+f7bOzOTR/MEsLi0mSjZ8v5a3TX+fx
+      R/cJgOkwu31HxqO/zs6vX83cbVuTJDPbdmZ87fsMv17La8eO5bGDhzIzHmVmE+4K/4ltN4xz
+      ZWPIrVuSTH7KZHJTPll+I2fXfsyw/HYurK4IgOl1/567svzhZ9n/yO58dWYpt9+3N/fuuyfP
+      7nowSfLljZczGoZh+Jdz4H/v+KsvZ+3iei6cv5i5nXdk9wMP56E9d+elIy/k0i/JxvjmPP3U
+      k9m65Y930rfnlgTAdBuGIZPJJOPxOKPR6B/rAqCaXyCqCYBqAqCaAKgmAKoJgGoCoJoAqCYA
+      qgmAagKgmgCoJgCqCYBqAqCaAKgmAKoJgGoCoJoAqCYAqgmAagKgmgCoJgCqCYBqAqCaAKgm
+      AKoJgGoCoJoAqCYAqgmAagKgmgCoJgCqCYBqAqCaAKgmAKoJgGoCoJoAqCYAqgmAagKgmgCo
+      JgCqCYBqAqCaAKgmAKoJgGoCoJoAqCYAqgmAagKgmgCoJgCqCYBqAqCaAKgmAKoJgGoCoJoA
+      qCYAqgmAagKgmgCoJgCqCYBqAqCaAKgmAKoJgGoCoJoAqCYAqgmAagKgmgCoJgCqCYBqAqCa
+      AKgmAKr9BmHGhI3/6l9QAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Total Production' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAADZ0lEQVR4nO3XvcvQVRiA4efVUlLJL/p4rcSiIYeCUMpoaIn2aGgsgnAoyP+mpaaIpHBo
+      ikCpJSooJGlpKSjM1FBRyUzx1yJCNBa84H1d48MZnuXmnLOyLMsyELVurReAtSQA0gRAmgBI
+      EwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQB
+      kCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBp
+      AiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA
+      0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBN
+      AKQJgDQBkCYA0gRAmgBIEwBpd6z1AvB/+evKpfnmux/mmQP7Z+XmbFluzIlvv56H9u6bHZs3
+      zMzMudO/zNFjn8+6TTsEwO3hxFfH5uiX38+Fi9fn6QP7Z/3MXDrz87z73odz9tzv88qDj8+O
+      zRvm6uWz8/Y7H8xrB1+f5fJpTyBuD3v27ptDh96Y1W2bb802bNkxB998a5598rFbs2t/Xprt
+      q4/M/Tu3z+ruR90A3B7u3rptZq7/Y7Zx05Z/nduyc8+sbvxsDn90ZG78cV4AtJz58fhc2Lh7
+      Xn3p+ZnlhicQLdeuXpllZf3MzW/yyrIsy9quBP/dpx8fnp9OnZ9fT56a1Qd2zRNPPTf33Xlx
+      jn5xfM6d/W3u2nrP3Lvr4Xn5xRfmkyPvz8kL12auXREAPcuyzLIsMysrAqDNH4A0AZAmANIE
+      QJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCk
+      CYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoA
+      SBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0
+      AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMA
+      aQIgTQCkCYC0vwHcunH9mkEphQAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Zohr Discovery 2016-2020' width='192'>
+      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
+      JMeYbK7z5AAAAABJRU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>
